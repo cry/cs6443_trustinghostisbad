@@ -1,4 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-home
+<h1>welcome to week 5</h1>
+<p>Your goal: steal admins reset email</p>
+<hr>
+
+<h3>Register</h3>
+<p>pls give email that exists and not unsw (they blackhole sendmail emails)</p>
+<form action="register" method="POST">
+    <input type="text" name="username" placeholder="Username" class="form-control">
+    <input type="text" name="email" placeholder="Email" class="form-control mt-2">
+    <input type="submit" value="Register" class="btn btn-success mt-3">
+</form>
+
+<hr>
+
+<h3>Send a reset email</h3>
+<br>
+<form action="reset" method="POST">
+    <input type="text" name="username" placeholder="Username" class="form-control">
+    <input type="submit" value="Send" class="btn btn-danger mt-3">
+</form>
+
+<hr>
+
+<h3>Clue</h3>
+
+<pre class="mt-5">{{clue}}</pre>
 {% endblock %} 
